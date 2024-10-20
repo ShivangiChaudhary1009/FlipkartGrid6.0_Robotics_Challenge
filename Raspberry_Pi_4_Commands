@@ -1,1 +1,27 @@
+How to control the Camera Module via the command line:
+
+#Now your Camera Module is connected and the software is enabled, try out the command line tools rpicam-still and rpicam-vid.
+
+
+#Open a terminal window by clicking the black monitor icon in the taskbar:
+
+
+
+#Type in the following command to take a still picture and save it to the Desktop:
+rpicam-still -o ~/Desktop/image.jpg
+
+#Press Enter to run the command.
+#When the command runs, you can see the camera preview open before a still picture is taken.
+
+
+#Look for the picture file icon on the Desktop, and double-click the file icon to open the picture.
+
+#By adding different options, you can set the size and look of the image the rpicam-still command takes.
+
+
+#Add --width and --height to change the dimensions of the image:
+rpicam-still -o ~/Desktop/image-small.jpg --width 640 --height 480
+
+#Now record a video with the Camera Module by using the following rpicam-vid command:
+rpicam-vid -o ~/Desktop/video.mp4
 
