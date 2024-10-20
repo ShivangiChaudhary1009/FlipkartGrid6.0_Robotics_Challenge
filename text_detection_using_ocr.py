@@ -3,7 +3,7 @@ import pytesseract
 import re
 
 # Read and preprocess the image
-img = cv2.imread('pudinhara.jpg')
+img = cv2.imread('soap.jpg')
 
 # Convert to grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -31,7 +31,3 @@ expiry_date = expiry_date_match.group(2) if expiry_date_match else 'Not Found'
 # Search for MFG date
 mfg_date_match = re.search(mfg_date_pattern, extracted_text, re.IGNORECASE)
 mfg_date = mfg_date_match.group(2) if mfg_date_match else 'Not Found'
-
-# Print the results
-print(f"Expiry Date: {expiry_date}")
-print(f"Manufacturing Date: {mfg_date}")
